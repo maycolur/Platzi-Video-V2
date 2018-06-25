@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 import Media from './media'
 import './media.css'
-
-class Playlist extends Component {
-  render() {
-    const playlist = this.props.data.categories[0].playlist
+/*
+  Este es un componente duncional y solo se encarga de rencerrizar ui, no posee estado y tampoco lo manejara
+*/
+function Playlist (props) {
     return (
       <div className="container">
         {
-          playlist.map((media) => {
-            return  <Media key={media.id} image={media.cover} title={media.title} author={media.author}/>
+          props.playlist.map((media) => {
+            return  <Media key={media.id} {...media}/>
           })
         }
       </div>
     )
-  }
 }
-
 export default Playlist

@@ -6,10 +6,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // componentes
-import Playlist from './src/playlist/components/playlist'
+// import Playlist from '../playlist/components/playlist'
+import Home from '../pages/containers/home'
 // data
-import Data from './src/api.json'
+import data from '../api.json'
 
 const app = document.getElementById('app')
 // el metodo render de react don recibe 2 parametros, que va a renderizar y donde lo va a renderizar!!
-ReactDOM.render(<Playlist data={ Data } />, app)
+ReactDOM.render(<Home data={data} />, app)
