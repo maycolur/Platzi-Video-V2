@@ -3,7 +3,7 @@ import Playlist from '../../playlist/components/playlist'
 
 function Category(props) {
     return (
-        <div>
+        <div className="category">
             <p>{ props.description }</p>
             <h2>{ props.title }</h2>
             <Playlist playlist={ props.playlist }/>

@@ -3,10 +3,10 @@ import Category from './category'
 
 function Categories(props) {
     return(
-        <div>
+        <div className="categories">
             {
                 props.categories.map(item => {
-                    return <Category key={item.id} {...item}/>
+                    return <Category key={ item.id } {...item } />
                 })
             }
         </div>
