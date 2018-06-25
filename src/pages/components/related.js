@@ -10,5 +10,4 @@ function Related(props) {
         
     )
 }
-
 export default Related
