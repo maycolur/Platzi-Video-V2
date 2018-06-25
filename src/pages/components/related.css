@@ -1,0 +1,7 @@
+.related-container {
+    min-width: 360px;
+    background-color: #171B2D;
+    text-align: center;
+    overflow: hidden;
+    max-height: 100vh;
+}

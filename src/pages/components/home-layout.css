@@ -1,4 +1,12 @@
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+.homelayout {
+    display: flex;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-height: 100vh;
 }
