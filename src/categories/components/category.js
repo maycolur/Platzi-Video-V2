@@ -6,7 +6,10 @@ function Category(props) {
         <div className="category">
             <p>{ props.description }</p>
             <h2>{ props.title }</h2>
-            <Playlist playlist={ props.playlist }/>
+            <Playlist
+              playlist={ props.playlist }
+              handleTogleModalClick={ props.handleTogleModalClick }
+            />
         </div>
     )
 }

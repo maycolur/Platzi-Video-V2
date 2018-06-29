@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Media from './media'
 import './media.css'
 /*
@@ -9,7 +9,11 @@ function Playlist (props) {
       <div className="container">
         {
           props.playlist.map(media => {
-            return  <Media key={media.id} {...media}/>
+            return  <Media
+                      key={media.id}
+                      {...media}
+                      handleTogleModalClick={props.handleTogleModalClick}
+                    />
           })
         }
       </div>

@@ -7,7 +7,11 @@ function Categories(props) {
         <div className="categories">
             {
                 props.categories.map(item => {
-                    return <Category key={ item.id } {...item } />
+                    return <Category
+                      key={ item.id }
+                      {...item }
+                      handleTogleModalClick={ props.handleTogleModalClick }
+                    />
                 })
             }
         </div>

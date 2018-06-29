@@ -3,18 +3,35 @@ import HomeLayout from '../components/home-layout';
 import Categories from '../../categories/components/categories'
 import Related from '../components/related'
 import ModalContainer from '../../widgets/containers/modal'
+import Modal from '../../widgets/components/modal'
+import HandleError from '../../error/containers/handle-error'
+
 class Home extends Component {
+  state = {
+    modalIsVisible: false
+  }
+  handleTogleModalClick = (event) => {
+    this.setState({
+      modalIsVisible: !this.state.modalIsVisible
+    })
+  }
     render() {
         return(
+          <HandleError>
             <HomeLayout> 
                 <Related />
-                <Categories categories={ this.props.data.categories } />
+                <Categories
+                  handleTogleModalClick={ this.handleTogleModalClick }
+                  categories={ this.props.data.categories }
+                />
+              {
+                this.state.modalIsVisible &&
                 <ModalContainer>
-                  <h1>
-                    Hello Modal
-                  </h1>
+                  <Modal handleTogleModalClick={ this.handleTogleModalClick }/>
                 </ModalContainer>
+              }
             </HomeLayout>
+          </HandleError>
         )
     }
 }
