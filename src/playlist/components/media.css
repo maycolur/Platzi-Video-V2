@@ -16,8 +16,8 @@
     transition: .2s;
 }
 .card:hover {
-    transition: .2s;
-    border-bottom: 2px solid #EB3F3E;
+    transition: .1s;
+    border-bottom: 1px solid #EB3F3E;
     margin: 7px 10px 12px 10px;
 }
 
