@@ -8,8 +8,9 @@ import PropTypes from 'prop-types'
 // Componente puro el cual tiene ya implementado el metodo componentShouldUpdate()
 class Media extends PureComponent { 
 
-  handleClick = (event) => {
+  handleClick = (ev) => {
     console.log(this.props)
+    console.log(ev.target)
   }
   render() {
     return(

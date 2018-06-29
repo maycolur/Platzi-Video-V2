@@ -8,7 +8,7 @@ function Playlist (props) {
     return (
       <div className="container">
         {
-          props.playlist.map((media) => {
+          props.playlist.map(media => {
             return  <Media key={media.id} {...media}/>
           })
         }

@@ -11,6 +11,6 @@ import Home from '../pages/containers/home'
 // data
 import data from '../api.json'
 
-const app = document.getElementById('app')
+const homeContainer = document.getElementById('home-container')
 // el metodo render de react don recibe 2 parametros, que va a renderizar y donde lo va a renderizar!!
-ReactDOM.render(<Home data={data} />, app)
+ReactDOM.render(<Home data={data} />, homeContainer)
