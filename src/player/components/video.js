@@ -23,7 +23,8 @@ class Video extends PureComponent {
 
   render() {
     const {
-      handleLoadedMetadata
+      handleLoadedMetadata,
+      handleOnTimeUpdate
     } = this.props
     
     return (
@@ -33,6 +34,7 @@ class Video extends PureComponent {
           src={this.props.src}
           autoPlay={this.props.autoplay}
           onLoadedMetadata={handleLoadedMetadata}
+          onTimeUpdate={handleOnTimeUpdate}
         />
       </div>
     )
