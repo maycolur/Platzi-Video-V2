@@ -22,12 +22,17 @@ class Video extends PureComponent {
   }
 
   render() {
+    const {
+      handleLoadedMetadata
+    } = this.props
+    
     return (
       <div className="Video">
         <video 
           ref={this.setRef}
-          src={ this.props.src }
-          autoPlay={ this.props.autoplay }
+          src={this.props.src}
+          autoPlay={this.props.autoplay}
+          onLoadedMetadata={handleLoadedMetadata}
         />
       </div>
     )
