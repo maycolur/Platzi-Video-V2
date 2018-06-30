@@ -29,7 +29,9 @@ class Home extends Component {
               this.state.modalIsVisible &&
               <ModalContainer>
                 <Modal handleTogleModalClick={ this.handleTogleModalClick }>
-                  <VideoPlayer />
+                  <VideoPlayer 
+                    autoplay
+                  />
                 </Modal>
               </ModalContainer>  
             }
