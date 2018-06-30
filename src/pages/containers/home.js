@@ -5,6 +5,8 @@ import Related from '../components/related'
 import ModalContainer from '../../widgets/containers/modal'
 import Modal from '../../widgets/components/modal'
 import HandleError from '../../error/containers/handle-error'
+import VideoPlayer from '../../player/containers/video-player'
+
 class Home extends Component {
   state = {
     modalIsVisible: false
@@ -16,7 +18,6 @@ class Home extends Component {
   }
     render() {
         return(
-
           <HandleError>
             <HomeLayout> 
                 <Related />
@@ -28,6 +29,7 @@ class Home extends Component {
                 this.state.modalIsVisible &&
                 <ModalContainer>
                   <Modal handleTogleModalClick={ this.handleTogleModalClick }/>
+                  <VideoPlayer />
                 </ModalContainer>
               }
             </HomeLayout>
