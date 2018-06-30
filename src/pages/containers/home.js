@@ -17,27 +17,27 @@ class Home extends Component {
     })
   }
     render() {
-        return(
-          <HandleError>
-            <HomeLayout> 
-                <Related />
-                <Categories
-                  handleTogleModalClick={ this.handleTogleModalClick }
-                  categories={ this.props.data.categories }
-                />
-              {
-                this.state.modalIsVisible &&
-                <ModalContainer>
-                  <Modal handleTogleModalClick={ this.handleTogleModalClick }/>
+      return(
+        <HandleError>
+          <HomeLayout> 
+            <Related />
+            <Categories
+              handleTogleModalClick={ this.handleTogleModalClick }
+              categories={ this.props.data.categories }
+            />
+            {
+              this.state.modalIsVisible &&
+              <ModalContainer>
+                <Modal handleTogleModalClick={ this.handleTogleModalClick }>
                   <VideoPlayer />
-                </ModalContainer>
-              }
-            </HomeLayout>
-          </HandleError>
-        )
+                </Modal>
+              </ModalContainer>  
+            }
+          </HomeLayout>
+        </HandleError>
+      )
     }
 }
-
 
 export default Home
 
