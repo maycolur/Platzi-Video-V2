@@ -6,6 +6,9 @@ function Related(props) {
     return(
         <div className="related-container">
             <img src={ logo }  width="250"/>
+            <ul>
+
+            </ul>
         </div>
         
     )
