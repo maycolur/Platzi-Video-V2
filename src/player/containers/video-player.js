@@ -14,7 +14,8 @@ class VideoPlayer extends Component {
 		pause: true,
 		duration: 0,
 		currentTime: 0,
-		isLoading: false
+		isLoading: false,
+		mute: false
 	}
 
 	togglePlay = (event) => {
@@ -61,6 +62,7 @@ class VideoPlayer extends Component {
 	handleVolume = (event) => {
 		this.video.volume = event.target.value
 	}
+
 	
 	render() {
 		return (
