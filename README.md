@@ -1,3 +1,8 @@
+## Como empezar?
+	* npm install
+	* npm run build:dev
+	* npm run build:prod
+
 ## React y ReactDOM
 React como libreria esta dividida en 2 partes, React y ReactDOM, con la primera es con la
  que vamos a generar la aplicacion utilizando componentes y demas y la segunda se encarga 
