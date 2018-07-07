@@ -12,7 +12,8 @@ class VideoPlayer extends Component {
 	state = {
 		pause: true,
 		duration: 0,
-		currentTime: 0
+		currentTime: 0,
+		isLoading: false
 	}
 
 	togglePlay = (event) => {
@@ -43,6 +44,18 @@ class VideoPlayer extends Component {
 	handleProgressChanges = (event) => {
 		this.video.currentTime = event.target.value
 	}
+
+	handleSeeking = (event) => {
+		this.setState({
+			isLoading: true
+		})
+	}
+
+	handleSeeKed = (event) => {
+		this.setState({
+			isLoading: false
+		})
+	}
 	
 	render() {
 		return (
@@ -65,13 +78,17 @@ class VideoPlayer extends Component {
 						handleChanges={this.handleProgressChanges}
 					/>
 				</Controls>
-				<Spinner />
+				<Spinner 
+					loading={this.state.isLoading}
+				/>
 				<Video 
 					autoplay={this.props.autoplay}
 					handleLoadedMetadata={this.handleLoadedMetadata}
 					handleOnTimeUpdate={this.handleTimeUpdate}
 					pause={this.state.pause}
-					src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" 
+					src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+					handleOnSeeKing={this.handleSeeking}
+					handleOnSeeKed={this.handleSeeKed}
 				/>
 			</VideoPlayerLayout>
 		)
