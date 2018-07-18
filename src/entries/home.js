@@ -8,26 +8,33 @@ import ReactDOM from 'react-dom'
 // componentes
 // import Playlist from '../playlist/components/playlist'
 import Home from '../pages/containers/home'
-// data
+// datas
 import data from '../api.json'
 // Redux
 import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 const plugin = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
+import reducer from '../reducers/data'
+/* estado inicial */
 const initialState = {
   data: {
-    ...data
-  }
+    ...data,
+  },
+  search: [],
 }
 
+/* store */
 const store = createStore(
-  (state) => state,
+  reducer,
   initialState,
   plugin
 )
 
-console.log(store.getState())
-
+/* root component */
 const homeContainer = document.getElementById('home-container')
 // el metodo render de react don recibe 2 parametros, que va a renderizar y donde lo va a renderizar!!
-ReactDOM.render(<Home data={data} />, homeContainer)
+ReactDOM.render(
+  <Provider store={store}>
+   <Home />
+  </Provider>,
+  homeContainer)
