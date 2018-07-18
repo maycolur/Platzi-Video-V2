@@ -13,8 +13,9 @@ import data from '../api.json'
 // Redux
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-const plugin = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 import reducer from '../reducers/data'
+const plugin = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 /* estado inicial */
 const initialState = {
   data: {
