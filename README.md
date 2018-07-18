@@ -85,3 +85,20 @@ Los componenetes en react tinene un metodo llamado setState con el cual se puede
 * Normalmente tienen estado
 * Llaman acciones
 * Generados por higher order components
+
+
+## Redux Bacis
+
+1. Store
+
+	* Contiene el estado de la aplicacion
+	* Puede acceder al estado con el metodo getState()
+	* Puedes actualizar el estado con el metodo dispatch(action)
+	* Escucha cambios con el metodo subscribe´(listener)
+	* Deja de escuchar cambios retornando la funcion del metodo subscribe(listener)
+
+#### Como se component el store?  import { createStore } from 'redux'
+
+	1. reducer = Function pura que retorna el proximo estado
+	2. preloadState / InitialState = Estado inicial de la aplicacion, primera carga, llamado al api. Pueder ser cual tipo de dato.
+	3. enhancer = function que puede extender redux con capacidades anadidas por librerias externas. Es un parametro opcional.
