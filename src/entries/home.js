@@ -10,6 +10,23 @@ import ReactDOM from 'react-dom'
 import Home from '../pages/containers/home'
 // data
 import data from '../api.json'
+// Redux
+import { createStore } from 'redux'
+const plugin = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+const initialState = {
+  data: {
+    ...data
+  }
+}
+
+const store = createStore(
+  (state) => state,
+  initialState,
+  plugin
+)
+
+console.log(store.getState())
 
 const homeContainer = document.getElementById('home-container')
 // el metodo render de react don recibe 2 parametros, que va a renderizar y donde lo va a renderizar!!
