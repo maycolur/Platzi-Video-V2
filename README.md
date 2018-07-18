@@ -102,3 +102,19 @@ Los componenetes en react tinene un metodo llamado setState con el cual se puede
 	1. reducer = Function pura que retorna el proximo estado
 	2. preloadState / InitialState = Estado inicial de la aplicacion, primera carga, llamado al api. Pueder ser cual tipo de dato.
 	3. enhancer = function que puede extender redux con capacidades anadidas por librerias externas. Es un parametro opcional.
+
+#### Reducer
+
+	* Modifican nuestro estado
+	* Puede haber múltiples reducers en la aplicación y un solo store.
+	* Devuelve el siguiente estado.
+	* Que no deben hacer
+
+	Modificar los argumentos recibidos
+	Llamar a APIs (u otras tareas secundarias)
+	Llamar a funciones no puras como Date.now(), Math.random()
+	<h1>Funciones puras</h1>
+	Es un concepto de programación funcional, hace que el código sea más legible. Tienen las siguientes condiciones:
+	Dados los mismos datos de entrada, deben retornar el mismo resultado sin importar el número de veces que se llame.
+	No debe tener objetos secundarios.
+	El reducer se iguala a una función, esta función recibe dos parámetros que son el state y la action y en la función se debe definir que se hace con state y action; generalmente se valida con un switch.
