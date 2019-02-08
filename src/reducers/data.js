@@ -11,7 +11,6 @@ function data (state, action) {
       if (action.payload.query) {
         let videoList = getVideosOfAllCategories(state.data.categories)
         results = videoList.filter(item => item.title.includes(action.payload.query))
-        console.log(results)
       }
      return {
        ...state,
