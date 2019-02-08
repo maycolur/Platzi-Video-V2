@@ -19,6 +19,7 @@ class SearchContainer extends Component {
     this.setState({
       value: event.target.value
     })
+    this.handleSubmit(event)
   }
   setRef = (element) => {
     this.input = element

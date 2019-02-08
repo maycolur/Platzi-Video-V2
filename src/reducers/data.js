@@ -1,8 +1,11 @@
 import Category from "../categories/components/category";
 
-/*
-*  Reducer to manage the api
-*/
+/**
+ * 
+ * reducer to manage manage de search of videos
+ * @param {object} state 
+ * @param {object} action 
+ */
 function data (state, action) {
   console.log(state)
   let results = []
@@ -22,6 +25,11 @@ function data (state, action) {
   }
 }
 
+/**
+ * 
+ * handle get videos of all categories
+ * @param {Array} categories  
+ */
 function getVideosOfAllCategories(categories) {
   let videos = []
   for(let category of categories) {
