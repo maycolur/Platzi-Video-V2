@@ -27,10 +27,13 @@
     "file-loader": "^1.1.5",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.3"
   },
   "dependencies": {
+    "@types/clean-webpack-plugin": "^0.1.2",
+    "@types/extract-text-webpack-plugin": "^3.0.4",
+    "@types/node": "^11.10.4",
     "prop-types": "^15.6.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
