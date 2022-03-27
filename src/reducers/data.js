@@ -2,7 +2,7 @@ import Category from "../categories/components/category";
 
 /**
  * 
- * reducer to manage manage de search of videos
+ * reducer that manage search proccess of videos
  * @param {object} state 
  * @param {object} action 
  */
